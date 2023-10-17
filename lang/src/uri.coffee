@@ -14,11 +14,10 @@ _hook = new Set
     pre = [lang,o]
     return
   (f)=>
+    _hook.add f
+    if pre
+      f.apply ...pre
     =>
-      _hook.add f
-      if pre
-        f.apply ...pre
-      =>
-        _hook.delete f
-        return
+      _hook.delete f
+      return
 
