@@ -8,10 +8,13 @@ _hook = new Set
   + pre
   onSet (lang)=>
     o = unpack await fBinMd(lang+'/'+uri)
-    _hook.forEach (f)=>
-      f.apply lang, o
-      return
     pre = [lang,o]
+    _hook.forEach (f)=>
+      try
+        f.apply lang, o
+      catch err
+        console.error err
+      return
     return
   (f)=>
     _hook.add f
