@@ -1,6 +1,6 @@
 > @8n/on:On
 
-+ PRE
+PRE = location.pathname.slice(1)
 
 HOOK = []
 
@@ -19,7 +19,7 @@ HOOK = []
   return
 
 < nowUrl = =>
-  PRE or location.pathname.slice(1)
+  PRE
 
 On(
   window
