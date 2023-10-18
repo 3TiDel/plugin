@@ -19,10 +19,9 @@ HOOK = []
   return
 
 < nowUrl = =>
-  PRE
+  PRE or location.pathname.slice(1)
 
 On(
   window
   popstate: refresh
-  load: refresh
 )
