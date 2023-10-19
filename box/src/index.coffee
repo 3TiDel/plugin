@@ -1,6 +1,5 @@
 > @8n/on:On
   @8n/tag0
-  ./styl/box.styl
 
 {body} = doc = document
 
