@@ -1,5 +1,5 @@
-> ./index.js > onSet
-  ~/lib/fBinMd.js
+> ~/lib/fBinJs.js
+  ./index.js > onSet
   @w5/msgpack > unpack
 
 _hook = new Set

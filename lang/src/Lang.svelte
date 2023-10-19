@@ -1,7 +1,7 @@
 <script lang="coffee">
 > ./index.js > set
   ./nowLang.js
-  ~/lib/lang.js:LI
+  ~/lib/LANG.js:LI
   @8n/on:On
   @8n/minw
   svelte > tick
