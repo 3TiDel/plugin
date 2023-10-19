@@ -1,8 +1,14 @@
 > ./uri.js
-  ~/lib/fBinJs.js
-  ~/lib/lang.js
+  ~/lib/fLang.js
+  ~/lib/LANG.js:@ > HASH
 
 export default uri (lang)=>
-  for [i] from lang
+  now = 0
+  for [i],p in LANG
     if i == lang
-  fBinJs()
+      now = p
+      break
+
+  fLang(
+    HASH[now]
+  )

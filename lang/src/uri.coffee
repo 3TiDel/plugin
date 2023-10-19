@@ -1,26 +1,20 @@
 > ~/lib/fBinJs.js
   ./index.js > onSet
-  @w5/msgpack > unpack
 
-_hook = new Set
+HOOK = new Set
 
-< (uri)=>
-  + pre
+< (req)=>
+  + lang_li
   onSet (lang)=>
-    o = unpack await fBinMd(lang+'/'+uri)
-    pre = [lang,o]
-    _hook.forEach (f)=>
-      try
-        f.apply lang, o
-      catch err
-        console.error err
-      return
+    lang_li = await req(lang)
+    for f from HOOK
+      f.call lang, lang_li
     return
   (f)=>
-    _hook.add f
-    if pre
-      f.apply ...pre
+    HOOK.add f
+    if lang_li
+      f.call lang, lang_li
     =>
-      _hook.delete f
+      HOOK.delete f
       return
 
