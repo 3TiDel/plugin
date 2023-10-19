@@ -1,22 +1,22 @@
 #!/usr/bin/env coffee
 
-+ lang
+htm = document.documentElement
 
-_hook = new Set
+HOOK = new Set
 
 < =>
-  lang
+  htm.lang
 
 < set = (l)=>
-  document.documentElement.lang = lang = l
-  Promise.allSettled [..._hook].map (f)=>
+  htm.lang = l
+  Promise.allSettled [...HOOK].map (f)=>
     f l
 
 < onSet = (f)=>
-  _hook.add f
-  if lang
+  HOOK.add f
+  if htm.lang
     f lang
   =>
-    _hook.delete f
+    HOOK.delete f
     return
 

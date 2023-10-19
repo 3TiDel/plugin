@@ -4,16 +4,19 @@
 HOOK = new Set
 
 < (req)=>
-  + i18n
+  + args
   onSet (lang)=>
-    i18n = await req(lang)
+    args = [
+      lang
+      await req(lang)
+    ]
     for f from HOOK
-      f.call lang, i18n
+      f.call ...args
     return
   (f)=>
     HOOK.add f
-    if i18n
-      f.call lang, i18n
+    if args
+      f.call ...args
     =>
       HOOK.delete f
       return
