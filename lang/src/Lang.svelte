@@ -1,21 +1,22 @@
 <script lang="coffee">
 > ./index.js > set
-  ./langLi.js
+  ./nowLang.js
+  ~/lib/lang.js:LI
   @8n/on:On
   @8n/minw
   svelte > tick
 
-LI = []
 W = 'w'
 
-+ LANG, e, d, lang, b
+LANG = nowLang
+
++ e, d, lang, b
 
 onI18n (o)=>
   {lang} = o
   return
 
 onMount =>
-  [LANG, LI] = await langLi()
   e.classList.remove W
   + unbind
   On(
