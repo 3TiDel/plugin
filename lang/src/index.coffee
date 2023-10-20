@@ -1,5 +1,3 @@
-#!/usr/bin/env coffee
-
 htm = document.documentElement
 
 HOOK = new Set
@@ -14,7 +12,8 @@ HOOK = new Set
 
 < onSet = (f)=>
   HOOK.add f
-  if htm.lang
+  {lang} = htm
+  if lang
     f lang
   =>
     HOOK.delete f
