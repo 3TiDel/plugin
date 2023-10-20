@@ -4,4 +4,8 @@ DIR=$(realpath ${0%/*})
 cd $DIR
 set -ex
 
-exec build
+cd i18n
+bun x i18n
+cd ..
+build
+cp -r $DIR/i18n lib/
