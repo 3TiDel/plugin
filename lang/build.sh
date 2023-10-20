@@ -9,3 +9,4 @@ bun x i18n
 cd ..
 build
 cp -r $DIR/i18n lib/
+cp -r $DIR/svg/* lib/

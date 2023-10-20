@@ -74,7 +74,7 @@ i
 
 <style lang="stylus">
 m-c
-  background-image var(--svgLang)
+  background-image url('./lang.svg')
 
   &.w
     background-image var(--svgWait)
