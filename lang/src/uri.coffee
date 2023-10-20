@@ -10,10 +10,14 @@
     li = []
     bin = await req(lang)
     start = 0
-    for i,p in bin
-      if i == 0
+    p = 0
+    len = bin.length
+    while p <= len # <= 保证最后一个也会处理
+      i = bin[p]
+      if not i
         li.push utf8d bin.subarray start, p
         start = p + 1
+      ++p
 
     args = [
       lang
