@@ -11,7 +11,6 @@ click = =>
   return
 
 onMount =>
-  console.log 123
   On document,{
     fullscreenchange:=>
       f = document.fullscreenElement
