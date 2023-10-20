@@ -1,10 +1,10 @@
 #!/usr/bin/env coffee
 
-> ~/lib/LANG.js:LANG_LI
-  ./index.js > set
+> ./index.js > set
+  ~/lib/SITE.js
 
 s = new Set
-for [code] from LANG_LI
+for [code] from SITE.lang
   s.add code
 
 {LANG} = localStorage
