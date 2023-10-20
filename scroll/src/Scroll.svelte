@@ -339,5 +339,5 @@ b
       width 9px
 
 :global(body.scroll)
-  cursor var(--svgGrab) 8 7, pointer
+  cursor url('./grab.svg') 8 7, pointer
 </style>
