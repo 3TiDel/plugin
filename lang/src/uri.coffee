@@ -1,5 +1,4 @@
-> ~/lib/fBinJs.js
-  ./index.js > onSet
+> ./index.js > onSet
   @w5/utf8/utf8d.js
 
 HOOK = new Set
