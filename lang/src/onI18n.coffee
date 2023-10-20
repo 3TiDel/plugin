@@ -8,7 +8,6 @@ export default uri (lang)=>
     if i == lang
       now = p
       break
-
-  fLang(
+  fI18n(
     HASH[now]
   )

@@ -8,7 +8,11 @@ HOOK = new Set
 < set = (l)=>
   htm.lang = l
   Promise.allSettled [...HOOK].map (f)=>
-    f l
+    try
+      await f l
+    catch err
+      console.error err
+    return
 
 < onSet = (f)=>
   HOOK.add f
