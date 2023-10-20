@@ -1,9 +1,10 @@
 > ./index.js > onSet
   @w5/utf8/utf8d.js
 
-HOOK = new Set
 
 < (req)=>
+  HOOK = new Set
+
   + args
   onSet (lang)=>
 
