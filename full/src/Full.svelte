@@ -11,6 +11,7 @@ click = =>
   return
 
 onMount =>
+  console.log 123
   On document,{
     fullscreenchange:=>
       f = document.fullscreenElement
@@ -24,9 +25,9 @@ m-c(@click class:f=f title:>full)
 
 <style lang="stylus">
 m-c
-  background-image url('@8p/full/full.svg')
+  background-image url('./full.svg')
 
   &.f
-    background-image url('@8p/full/unfull.svg')
+    background-image url('./unfull.svg')
 </style>
 
