@@ -17,6 +17,7 @@
 
     args = [
       lang
+      li
     ]
     for f from HOOK
       f.call ...args
