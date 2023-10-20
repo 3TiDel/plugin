@@ -24,9 +24,9 @@ m-c(@click class:f=f title:>full)
 
 <style lang="stylus">
 m-c
-  background-image var(--svgFull)
+  background-image url('@8p/full/full.svg')
 
   &.f
-    background-image var(--svgUnfull)
+    background-image url('@8p/full/unfull.svg')
 </style>
 
