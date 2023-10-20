@@ -1,0 +1,19 @@
+{
+  "name": "@8p/captcha",
+  "type": "module",
+  "version": "0.0.1",
+  "repository": "https://github.com/i18n-plugin/plugin.git",
+  "homepage": "https://github.com/i18n-plugin/plugin/tree/main/captcha",
+  "dependencies": {
+    "@8n/render": "^0.0.1",
+    "@8p/box": "^0.0.3",
+    "@w5/msgpack": "^0.0.2"
+  },
+  "files": [
+    "*"
+  ],
+  "exports": {
+    ".": "./lib/index.js",
+    "./*": "./lib/*"
+  }
+}
