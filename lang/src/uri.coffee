@@ -1,14 +1,23 @@
 > ~/lib/fBinJs.js
   ./index.js > onSet
+  @w5/utf8/utf8d.js
 
 HOOK = new Set
 
 < (req)=>
   + args
   onSet (lang)=>
+
+    li = []
+    bin = await req(lang)
+    start = 0
+    for i,p in bin
+      if i == 0
+        li.push utf8d bin.subarray start, p
+        start = p + 1
+
     args = [
       lang
-      await req(lang)
     ]
     for f from HOOK
       f.call ...args
