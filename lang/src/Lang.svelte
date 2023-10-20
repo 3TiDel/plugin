@@ -8,13 +8,9 @@
 
 W = 'w'
 
-LANG = nowLang
+NOW = nowLang
 
-+ e, d, lang, b
-
-onI18n (o)=>
-  {lang} = o
-  return
++ e, d, b
 
 onMount =>
   e.classList.remove W
@@ -61,7 +57,7 @@ onMount =>
 
 c = (l)=>
   e.classList.add W
-  localStorage.LANG = LANG = l
+  localStorage.LANG = NOW = l
   await set l
   e.classList.remove W
   return
@@ -69,11 +65,11 @@ c = (l)=>
 
 <template lang="pug">
 i
-  m-c.w(title:lang @&e)
+  m-c.w(title:>lang @&e)
   +if d
     b(@&b)
       +each LI as i
-        a(@click={c(i[0])} class:n={i[0]==LANG}) {i[1]}
+        a(@click={c(i[0])} class:n={i[0]==NOW}) {i[1]}
 </template>
 
 <style lang="stylus">
