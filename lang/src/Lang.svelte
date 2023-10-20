@@ -1,7 +1,7 @@
 <script lang="coffee">
 > ./index.js > set
   ./nowLang.js
-  ~/lib/LANG.js:LI
+  ~/lib/SITE.js
   @8n/on:On
   @8n/minw
   svelte > tick
@@ -68,7 +68,7 @@ i
   m-c.w(title:>lang @&e)
   +if d
     b(@&b)
-      +each LI as i
+      +each SITE.lang as i
         a(@click={c(i[0])} class:n={i[0]==NOW}) {i[1]}
 </template>
 

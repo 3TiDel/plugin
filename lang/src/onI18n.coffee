@@ -1,13 +1,21 @@
 > ./uri.js
   ~/lib/fI18n.js
-  ~/lib/LANG.js:@ > HASH
+  ~/lib/fBinMd.js
+  ~/lib/LANG.js
+  @8n/bintxt
+  @w5/msgpack > unpack
 
 export default uri (lang)=>
-  now = 0
-  for [i],p in LANG
-    if i == lang
-      now = p
-      break
-  fI18n(
-    HASH[now]
-  )
+  [li,dict] = await Promise.all [
+    fI18n(
+      LANG[lang]
+    )
+    fBinMd(lang+'/_')
+  ]
+
+  [
+    Object.assign(
+      bintxt li
+      unpack dict
+    )
+  ]
