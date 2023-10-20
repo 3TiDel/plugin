@@ -1,5 +1,5 @@
 > ./uri.js
-  ~/lib/fLang.js
+  ~/lib/fI18n.js
   ~/lib/LANG.js:@ > HASH
 
 export default uri (lang)=>

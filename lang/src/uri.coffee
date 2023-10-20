@@ -1,7 +1,6 @@
 > ./index.js > onSet
   @w5/utf8/utf8d.js
 
-
 < (req)=>
   HOOK = new Set
 
