@@ -7,8 +7,8 @@
   "dependencies": {
     "@8n/minw": "^0.0.2",
     "@8n/on": "^0.0.1",
-    "@w5/msgpack": "^0.0.2",
-    "@w5/utf8": "^0.0.3"
+    "@3-/msgpack": "^0.0.2",
+    "@3-/utf8": "^0.0.3"
   },
   "devDependencies": {
     "~": "link:../../site/src",
