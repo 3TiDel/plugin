@@ -7,7 +7,7 @@
   "dependencies": {
     "@8n/render": "^0.0.1",
     "@8p/box": "^0.0.3",
-    "@w5/msgpack": "^0.0.2"
+    "@3-/msgpack": "^0.0.2"
   },
   "files": [
     "*"
